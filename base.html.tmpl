@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10, user-scalable=yes">
+  <title>{%bash title %}</title>
+  <link rel="stylesheet" href="/~krose/styles/darkmode.css">
+  <base href="https://www.krose.org/~krose/">
+
+  <!-- highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+
+    <div class="site-header">{%bash title %}</div>
+
+    <div class="site-main">
+
+    <div class="layout">
+
+        <div class="left-sidebar">
+        <div class="nav">
+{%bash html-nav-path %}
+        </div>
+        </div>
+
+        <div class="content">
+{%bash render-content %}
+        </div>
+
+        <div class="right-sidebar"></div>
+
+    </div>
+
+    </div>
+
+    <div class="site-footer">
+Except where otherwise noted: Copyright ⓒ  2025 Kyle R. Rose. All Rights Reserved.
+    </div>
+
+</body>
+</html>
