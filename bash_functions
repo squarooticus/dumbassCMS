@@ -123,7 +123,7 @@ render-content() {
     local page=${1:-$thispage}
     awk '/^---$$/ && c <= 1 { c++; next; }; c != 1' $(content-filespec "$page") | \
         process-template | \
-        python -m markdown -x fenced_code
+        python -m markdown -x fenced_code -x pymdownx.superfences
 }
 #python -c 'import markdown; import sys; print(markdown.markdown(sys.stdin.read()));'
 

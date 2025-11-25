@@ -6,6 +6,10 @@ I was in search of a very basic CMS where I could drop markdown files and have t
 
 This thing is intended for use of self-generated content only. The templating "system", such as it is, runs whatever bash code is specified in the template and content files! That means you do not want to include user-generated content (i.e., *adversary*-generated content) in the rendering process. This thing is completely insecure as-is if you naively add commenting, file upload, or other content injection mechanisms without taking great care to exclude them from the template rendering process.
 
+## Preparation
+
+On Debian, install `python3-markdown`, `python3-pymdownx` (for the SuperFences extension), and `yq` (which will also bring in `jq`). Do whatever is equivalent on your distro.
+
 ## Configuration
 
 ### Makefile
