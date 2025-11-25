@@ -89,11 +89,10 @@ html-nav-path() {
             ppage=$ppath/index
             if page-exists "$ppage"; then
                 if [ "$ppage" = "$page" ]; then
-                    printf '<li class="current">'
+                    printf '<li class="current">%s\n' "$(title "$ppage")"
                 else
-                    printf '<li>'
+                    printf '<li><a href="%s">%s</a>\n' "$(page-url "$ppage")" "$(title "$ppage")"
                 fi
-                printf '<a href="%s">%s</a>\n' "$(page-url "$ppage")" "$(title "$ppage")"
             else
                 printf '%s\n' "$d"
             fi
