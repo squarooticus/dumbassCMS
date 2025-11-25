@@ -64,6 +64,20 @@ DirectoryIndex index.html
 Options -Indexes -MultiViews
 ```
 
+## Populate your site's markdown
+
+Your markdown files should have frontmatter (a line of `---`, followed by YAML, followed by another `---`) containing at least the key `title` with a plaintext title for the page as the value, all followed by the actual markdown content. For example:
+
+```
+---
+title: dumbassCMS is the worst, except for all others
+---
+# An intro to dumbassCMS
+.
+.
+.
+```
+
 ## Building
 
 Edit the Makefile and template as desired, make sure your content is all in the right place, and then run `make`. Voila!
