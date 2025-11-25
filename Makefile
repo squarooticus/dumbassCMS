@@ -50,5 +50,4 @@ $(all_html): export thispage=$(patsubst $(contentroot)/%.md,/%,$<)
 
 clean:
 	-rm -f $(call quote-sh,$(manifestfile)) $(call quote-sh,$(manifestfile)).tmp
-
-# noslashes=$${md//\//}; depth=$$(( $${$(octothorpe)md} - $${$(octothorpe)noslashes} )); \
+	-rm -f $(foreach i,$(all_html),$(call quote-sh,$i) $(call quote-sh,$i).tmp)
