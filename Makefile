@@ -1,18 +1,19 @@
+contentroot=$(HOME)/public_html/content
+renderedroot=$(HOME)/public_html/rendered
+stateroot=$(HOME)/public_html/state
+urlroot=/~krose
+
 SHELL=/bin/bash
 
 octothorpe := \#
 sq := '
 dq := "
 
+manifestfile=$(stateroot)/manifest.yaml
+
 otherinputs=Makefile bash_functions base.html.tmpl
 
 quote-sh=$(sq)$(subst $(sq),$(sq)$(dq)$(sq)$(dq)$(sq),$1)$(sq)
-
-contentroot=$(HOME)/public_html/content
-renderedroot=$(HOME)/public_html/rendered
-stateroot=$(HOME)/public_html/state
-urlroot=/~krose
-manifestfile=$(stateroot)/manifest.yaml
 
 export contentroot renderedroot stateroot urlroot manifestfile
 
